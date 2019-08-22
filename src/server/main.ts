@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bindUser);
 app.use(logger('dev'));
 
-app.use('/api', modulesRouter);
+app.use('/', modulesRouter);
 
 app.use(errors.notFound);
 app.use(errors.parser);
