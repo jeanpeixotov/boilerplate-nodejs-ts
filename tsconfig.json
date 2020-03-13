@@ -13,17 +13,17 @@
     "inlineSourceMap": true,
     "inlineSources": true,
     "alwaysStrict": true,
-    "rootDir": "./src/server",
-    "baseUrl": "./src/server",
+    "rootDir": "./server",
+    "baseUrl": "./server",
     "outDir": "bin/server",
     "paths": {
       "~/*": [
-        "./src/server/*"
+        "./server/*"
       ]
     }
   },
   "include": [
-    "src/server/**/*.ts"
+    "server/**/*.ts"
   ],
   "compileOnSave": false,
   "exclude": [

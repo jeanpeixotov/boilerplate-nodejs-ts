@@ -1,0 +1,12 @@
+FROM node:10.15-slim
+
+RUN apt-get update \
+  && apt-get install pdftk -y \
+  && set -x \
+  && chmod 775 /usr/local/bin/* \
+  && mkdir /src
+
+COPY . /src
+WORKDIR /src
+
+CMD [ "yarn", "dev" ]

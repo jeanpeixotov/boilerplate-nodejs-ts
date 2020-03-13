@@ -27,7 +27,7 @@
     "no-duplicate-variable": true,
     "indent": [true, "spaces"],
     "linebreak-style": [false, "LF"],
-    "max-file-line-count": [true, 300],
+    "max-file-line-count": [true, 400],
     "max-line-length": [true, 150],
     "no-default-export": false,
     "no-require-imports": true,

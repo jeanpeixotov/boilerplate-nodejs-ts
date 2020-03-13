@@ -6,7 +6,7 @@
       "request": "attach",
       "name": "Debug",
       "address": "127.0.0.1",
-      "port": 5859,
+      "port": 5860,
       "protocol": "inspector",
       "restart": true,
       "sourceMaps": true,

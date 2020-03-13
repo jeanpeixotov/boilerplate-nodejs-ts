@@ -1,4 +1,4 @@
-Nodejs ts Api Base
+Deepwater Api
 ==================
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/xx)
@@ -11,23 +11,15 @@ Utilize o VSCode, já está configurado com sugestão de extensões e debug.
 * Typescript
 * Docker
 * Express (Http Api)
-* Objection (ORM) / Knex (Query builder e migrations)
-* Mailgun (envio de email)
 * JWT (tokens)
 * Bcrypt (criptografia para senhas)
-* Raven (log de erros do sentry.io)
 * Joi (validação api)
-* Mocha/Chai (teste unitários)
-* Pug (templates de email)
 * Nodemon (dev watcher)
-* PM2 (Gerenciado do ambiente de produção)
 
 ### Iniciando um novo projeto
 
 ```bash
-yarn install # ou npm install
+yarn # ou npm install
 
-node ./init.js
+docker-compose up
 ```
-
-### Para mais informações veja a pasta ./docs

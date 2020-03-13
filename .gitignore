@@ -1,11 +1,8 @@
 node_modules
-bin
-*.log
-mochawesome-reports
-output-emails
 coverage
-.data
-npm-debug*
-upload/**
-v8-compile-cache*
-.DS_Store
+.package-lock.json
+newrelic_agent.log
+.env
+develop.env
+bin
+yarn-error.log
