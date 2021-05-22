@@ -1,10 +1,14 @@
-// tslint:disable-next-line
-require('dotenv').config();
-
-export const port = process.env.PORT || 3000;
-export const env = process.env.ENV || 'prd';
+export const port = process.env.PORT;
+export const env = process.env.ENV;
 export const isDevelopment = env === 'dev';
+export const isHomologation = env === 'hml';
 export const isProduction = env === 'prd';
+export const isLocal = env === 'local';
+
+if (isLocal) {
+  // tslint:disable-next-line
+  require('dotenv').config({ path: 'develop.env' });
+}
 
 export const configAws = {
   region: process.env.REGION,

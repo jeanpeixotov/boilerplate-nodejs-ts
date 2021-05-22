@@ -1,4 +1,4 @@
-FROM node:10.15-slim
+FROM node:14.2.0-slim
 
 WORKDIR /usr/src
 

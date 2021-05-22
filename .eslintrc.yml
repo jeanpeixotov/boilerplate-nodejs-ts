@@ -1,25 +1,44 @@
-env:
-  node: true
-  commonjs: true
-  es6: true
-extends: "eslint:recommended"
-plugins:
-  - jest
-globals:
-  Atomics: readonly
-  SharedArrayBuffer: readonly
-parserOptions:
-  ecmaVersion: 2018
-rules:
-  indent:
-    - error
-    - 2
-  linebreak-style:
-    - error
-    - unix
-  quotes:
-    - error
-    - single
-  semi:
-    - error
-    - never
+{
+  env: {
+  es2021: true,
+  node: true,
+    "jest/globals": true,
+    "es6": true
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint', 'jest', 'security', 'sonarjs', 'node'],
+  extends: [
+      'eslint:recommended',
+    'plugin:node/recommended',
+    'airbnb-base',
+    'plugin:jest/recommended',
+    'plugin:security/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:sonarjs/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+  ],
+    settings: {
+      node: {
+        resolvePaths: [__dirname],
+    tryExtensions: ['.js', '.json', '.node', '.ts'],
+    },
+    },
+  rules: {
+      'consistent-return': "off",
+      'no-console': 'off',
+      'no-continue': 'off',
+      'no-await-in-loop': 'off',
+      'no-unused-vars': ['error', { 'argsIgnorePattern': 'next' }],
+      'node/no-missing-import': 'off',
+      'node/no-extraneous-import': 'off',
+      'node/no-unsupported-features/es-syntax': [
+         'error',
+        { ignores: ['modules'] },
+      ],
+    }
+}

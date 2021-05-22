@@ -8,7 +8,6 @@
     "upload/**": true,
     "v8-compile-cache*": true
   },
-  "javascript.implicitProjectConfig.checkJs": false,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,

@@ -4,7 +4,7 @@ import { router as githubRouter } from './github';
 
 export const router = Router();
 
-router.get('/health', (req, res) => {
+router.get('/health', (_req, res) => {
   return res.json('alive');
 });
 

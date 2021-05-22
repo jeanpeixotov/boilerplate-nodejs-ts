@@ -1,4 +1,4 @@
-version: "2"
+version: '2'
 services:
   web:
     container_name: deepwater-boilerplate
@@ -6,8 +6,8 @@ services:
       context: .
       dockerfile: DockerfileLocal
     ports:
-      - "4000:3000"
-      - "5860:5860"
+      - '3000:3000'
+      - '5858:5858'
     env_file: develop.env
     volumes:
       - .:/src:cached

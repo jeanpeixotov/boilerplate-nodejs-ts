@@ -1,9 +1,9 @@
 {
-  "exec": "node --inspect=0.0.0.0:5860 bin/server/main.js",
+  "exec": "node --inspect=0.0.0.0:5858 bin/server/main.js",
   "watch": [
     "bin/server"
   ],
-  "ext": "js,pug",
+  "ext": "js",
   "delay": 1500,
   "stdout": true
 }

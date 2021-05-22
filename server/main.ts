@@ -1,4 +1,3 @@
-import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as morgan from 'morgan';
 
@@ -11,8 +10,6 @@ const app = express();
 
 export const setupApp = async () => {
   app.use(allowCors);
-  app.use(bodyParser.json({ limit: '50mb' }));
-  app.use(bodyParser.urlencoded({ extended: true }));
 
   app.use('/', modulesRouter);
   app.use(morgan('common'));
@@ -25,7 +22,7 @@ export const setupApp = async () => {
 
 setupApp();
 
-const server = app.listen(port, () => env !== 'test' && console.log(`server started: PORT: ${port} | ENV: ${env}`));
+const server = app.listen(port, () => env !== 'test' && console.log(`server started | ENV: ${env}`));
 
 export const closeApp = async () => {
   server.close();
